@@ -77,3 +77,5 @@ alias gi="git init"
 alias gcl="git clone"
 alias gd="git diff --output-indicator-new=' ' --output-indicator-old=' '"
 alias gap="git add --patch"
+
+export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
