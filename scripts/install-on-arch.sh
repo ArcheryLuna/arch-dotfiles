@@ -113,17 +113,11 @@ if [ -d "$HOME/.config/nvim" ]; then
     fi
 fi
 
-sudo npm install --global @tailwindcss/lanaguage-server
+sudo npm install npm@latest
+sudo npm install --global @tailwindcss/language-server
 
 echo "Installing Lazy Neovim Config"
 git clone https://github.com/ArcheryLuna/lazy-neovim-config.git ~/.config/nvim
-
-echo "Git configuration"
-read -p "Enter your Git username: " GIT_USER
-read -p " Enter your Git email: " GIT_EMAIL
-
-git config --global user.name "$GIT_USERNAME"
-git config --global user.email "$GIT_EMAIL"
 
 sudo systemctl enable --now bluetooth
 
