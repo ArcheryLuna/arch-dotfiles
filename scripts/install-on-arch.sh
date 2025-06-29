@@ -76,7 +76,8 @@ yay -S --noconfirm hyprland dolphin waybar \
     stow github-cli fd qt6-svg qt6-declarative qt5-quickcontrols2 \
     sddm-kcm sddm wget zip unzip spotify spicetify-cli polekit-gnome \
     python cargo gcc npm gum inetutils jq hyprshot diff-so-fancy \
-    ttf-jetbrains-mono-nerd noto-fonts-*
+    ttf-jetbrains-mono-nerd noto-fonts noto-fonts-cjk, noto-fonts-emoji \
+    noto-fonts-extra tmux
 
 if ! command -v zsh >/dev/null 2>&1; then
     echo "ZSH not found. installing zsh"
@@ -94,6 +95,9 @@ else
     echo "Changing default shell to zsh for user $CURRENT_USER"
     chsh -s "$(which zsh)"
 fi
+
+echo "Installing Bun"
+curl -fsSL https://bun.sh/install | bash
 
 echo "Changing directory to ../"
 cd $SCRIPT_DIR
@@ -147,7 +151,7 @@ sudo unzip "/tmp/$THEME_NAME.zip" -d "$THEME_DIR"
 
 # Set the theme in the sddm.conf file
 echo "Setting the theme in /etc/sddm.conf..."
-sudo sed -i "s|^# Current theme=.*|Current theme=$THEME_NAME|" /etc/sddm.conf
+cp ./sddm.conf /etc
 
 # Clean up
 rm "/tmp/$THEME_NAME.zip"
