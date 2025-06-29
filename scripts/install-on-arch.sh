@@ -12,7 +12,7 @@ echo "Script location : $SCRIPT_DIR"
 
 echo "Making a backup of your existing .config."
 echo "Moving ~/.config to ~/.config.bak"
-cp -r ~/.config ~/.config.bak/
+mv ~/.config ~/.config.bak/
 
 DISTRO_ID=$(grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"')
 
@@ -75,7 +75,8 @@ yay -S --noconfirm hyprland dolphin waybar \
     hyprlock gvfs libnotify wlogout fuzzel \
     stow github-cli fd qt6-svg qt6-declarative qt5-quickcontrols2 \
     sddm-kcm sddm wget zip unzip spotify spicetify-cli polekit-gnome \
-    python cargo gcc npm gum inetutils jq hyprshot diff-so-fancy
+    python cargo gcc npm gum inetutils jq hyprshot diff-so-fancy \
+    ttf-jetbrains-mono-nerd noto-fonts-*
 
 if ! command -v zsh >/dev/null 2>&1; then
     echo "ZSH not found. installing zsh"

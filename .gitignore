@@ -1,3 +1,5 @@
 .config/tmux/plugins/
 .config/nvim/.git
 .config/git/config
+.ssh/GitHub
+.ssh/GitHub.pub
