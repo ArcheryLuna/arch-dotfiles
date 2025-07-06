@@ -5,3 +5,4 @@
 .ssh/GitHub.pub
 .ssh/known_hosts
 .ssh/known_hosts.old
+.ssh/authorized_keys
