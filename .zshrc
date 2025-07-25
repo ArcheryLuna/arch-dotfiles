@@ -65,17 +65,21 @@ eval "$(fzf --zsh)"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-alias gs="git status --short"
-alias ga="git add"
-alias gc="git commit"
-alias gp="git push"
-alias gu="git pull"
-alias gl="git log --all --graph --pretty=\
-    format:'%C(magenta)%h %C(white) %an %ar%C(auto) %D%n%s%n"
-alias gb="git branch"
-alias gi="git init"
-alias gcl="git clone"
-alias gd="git diff --output-indicator-new=' ' --output-indicator-old=' '"
-alias gap="git add --patch"
-
 export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
+
+# Updating locales
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
+export LC_NUMERIC=en_US.UTF-8
+export LC_COLLATE=en_US.UTF-8
+export LC_TIME=en_US.UTF-8
+export LC_MESSAGES=en_US.UTF-8
+export LC_MONETARY=en_US.UTF-8
+export LC_ADDRESS=en_US.UTF-8
+export LC_IDENTIFICATION=en_US.UTF-8
+export LC_MEASUREMENT=en_US.UTF-8
+export LC_PAPER=en_US.UTF-8
+export LC_TELEPHONE=en_US.UTF-8
+export LC_NAME=en_US.UTF-8
