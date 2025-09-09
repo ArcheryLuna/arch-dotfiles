@@ -12,7 +12,6 @@ fi
 
 source "${ZINIT_HOME}/zinit.zsh"
 
-
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
@@ -63,7 +62,7 @@ eval "$(fzf --zsh)"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="$BUN_INSTALL/bin:$PATH:/home/archery/.radicle/bin"
 
 export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
 
